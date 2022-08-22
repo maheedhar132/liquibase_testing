@@ -1,0 +1,26 @@
+---
+app:
+  id: 100
+  name: Liquibase
+  email: maheedhar.talluri@gmail.com
+  region:
+   - us-east-1
+   - us-east-2
+env_prop:
+  dev:
+    aws_acc: 12345678
+    secretPath: /rad/dev
+    approval: true
+  qa:
+    aws_acc: 12345677
+    secretPath: /rad/qa
+    approval: true
+  uat:
+    aws_acc: 12345676
+    secretPath: /rad/uat
+    approval: true
+    skip: true
+  prod:
+    aws_acc: 12345675
+    secretPath: /rad/prod
+  
