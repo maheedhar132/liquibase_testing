@@ -4,7 +4,7 @@ agent any
 stages{
     stage('read yaml'){
         steps{
-        def yamlInput = readYaml file: "${WORKSPACE}/input.yaml"
+        yamlInput = readYaml file: "${WORKSPACE}/input.yaml"
         echo "Yamlfile: " + yamlInput
     }
     }
