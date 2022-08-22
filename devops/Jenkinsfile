@@ -1,3 +1,17 @@
+def yamlInput
 pipeline{
-
+agent any
+stages{
+    stage('read yaml'){
+        steps{
+        def yamlInput = readYaml file: "${WORKSPACE}/input.yaml"
+        echo "Yamlfile: " + yamlInput
+    }
+    }
+    stage('test yaml'){
+        steps{
+            echo "YAML"
+        }
+    }
+}
 }
