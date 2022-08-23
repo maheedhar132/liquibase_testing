@@ -9,7 +9,6 @@ stages{
         steps{
             script {
             yamlInput = readYaml file: "${WORKSPACE}/input.yaml"
-            echo "Yamlfile: " + yamlInput
             def var=yamlInput.getClass()
             print(yamlInput.env_prop)
             }
@@ -18,8 +17,7 @@ stages{
     }
     stage('test yaml'){
         steps{
-            echo "YAML"
-            print(yamlInput)
+            echo "This is step-2"
         }
     }
 }
