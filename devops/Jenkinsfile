@@ -10,11 +10,13 @@ stages{
             def var=yamlInput.getClass()
             print(yamlInput.app.id)
             }
+        print(yamlInput)
     }
     }
     stage('test yaml'){
         steps{
             echo "YAML"
+            print(yamlInput)
         }
     }
 }
