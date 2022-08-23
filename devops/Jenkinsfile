@@ -1,0 +1,23 @@
+def yamlInput
+def approval
+def secretPath
+def skip
+pipeline{
+agent any
+stages{
+    stage('read yaml'){
+        steps{
+            script {
+            yamlInput = readYaml file: "${WORKSPACE}/input.yaml"
+            def var=yamlInput.getClass()
+            print(yamlInput.env_prop)
+            }
+    }
+    }
+    stage('test yaml'){
+        steps{
+            echo "This is step-2"
+        }
+    }
+}
+}
