@@ -11,7 +11,7 @@ stages{
             yamlInput = readYaml file: "${WORKSPACE}/input.yaml"
             def var=yamlInput.getClass()
             print(yamlInput.env_prop)
-            print(${params.environmentName})
+            print(${env.environmentName})
             }
     }
     }
