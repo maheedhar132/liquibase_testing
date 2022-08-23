@@ -7,7 +7,7 @@ stages{
             script{
             yamlInput = readYaml file: "${WORKSPACE}/input.yaml"
             echo "Yamlfile: " + yamlInput
-            echo yamlInput['app']['id']
+            echo yamlInput['app']['id'][0]
             }
     }
     }
