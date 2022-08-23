@@ -7,7 +7,8 @@ stages{
             script {
             yamlInput = readYaml file: "${WORKSPACE}/input.yaml"
             echo "Yamlfile: " + yamlInput
-            yamlInput.getClass()
+            def var=yamlInput.getClass()
+            echo var
             }
     }
     }
