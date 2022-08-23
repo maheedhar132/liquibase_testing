@@ -1,4 +1,7 @@
 def yamlInput
+def approval
+def secretPath
+def skip
 pipeline{
 agent any
 stages{
@@ -8,7 +11,7 @@ stages{
             yamlInput = readYaml file: "${WORKSPACE}/input.yaml"
             echo "Yamlfile: " + yamlInput
             def var=yamlInput.getClass()
-            print(yamlInput.app.id)
+            print(yamlInput.env_prop)
             }
         print(yamlInput)
     }
