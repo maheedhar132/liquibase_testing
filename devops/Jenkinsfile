@@ -12,7 +12,6 @@ stages{
             def var=yamlInput.getClass()
             print(yamlInput.env_prop)
             }
-        print(yamlInput)
     }
     }
     stage('test yaml'){
