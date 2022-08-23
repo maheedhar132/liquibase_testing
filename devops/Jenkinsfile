@@ -4,9 +4,12 @@ agent any
 stages{
     stage('read yaml'){
         steps{
+            script {
             yamlInput = readYaml file: "${WORKSPACE}/input.yaml"
             echo "Yamlfile: " + yamlInput
             echo yamlInput['app']['id'][0]
+            yamlInput.getClass()
+            }
     }
     }
     stage('test yaml'){
