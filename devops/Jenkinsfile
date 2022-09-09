@@ -16,8 +16,11 @@ stages{
                 if ((env.Environment == "prod")){
                     print("This step clones MASTER barnch and is a prod deployment")
                 }
-                else if (env.Environment == "dev" || "qa"){
+                else if (env.Environment == "uat" || "qa"){
                     print("This step clones DEVELOP branch and is a dev/qa deployment")
+                }
+                else{
+                    print('This is a dev deployment')
                 }
             }
         }
