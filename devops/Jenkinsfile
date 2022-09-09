@@ -11,9 +11,16 @@ stages{
             }
     }
     }
-    stage('test yaml'){
-        steps{
-            echo "YAML"
+    stage('Deployment'){
+        stage{
+            script{
+                if (env.BRANCH_NAME == "master"){
+                    print("This is prod Deployment")
+                }
+                else if (env.BRANCH_NAME == "develop"){
+                    print("This is QA deployment")
+                }
+            }
         }
     }
 }
