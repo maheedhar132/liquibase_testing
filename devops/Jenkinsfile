@@ -12,7 +12,7 @@ stages{
     }
     }
     stage('Deployment'){
-        stage{
+        steps{
             script{
                 if ((env.Environment == "prod")){
                     print("This step clones MASTER barnch and is a prod deployment")
